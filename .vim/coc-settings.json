@@ -1,0 +1,13 @@
+{
+	"colors.enable": true,
+	"suggest.asciiCharactersOnly": true,
+	"suggest.autoTrigger": "always",
+	"suggest.defaultSortMethod": "length",
+	"suggest.minTriggerInputLength": 3,
+	"suggest.noselect": true,
+	"suggest.preferCompleteThanJumpPlaceholder": true,
+	"suggest.triggerAfterInsertEnter": true,
+	"cursors.nextKey": "<Tab>",
+	"cursors.previousKey": "<S-Tab>",
+	"hover.previewMaxHeight": 5
+}
