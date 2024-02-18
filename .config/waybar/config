@@ -1,10 +1,10 @@
 {
-    "layer":					"bottom",
+    "layer":					"top",
     "position":					"top", 
     "height":					36, 
-    "width":					1920,
-    "modules-left":			[	"hyprland/window",
-	   							"custom/media"			],
+    "width":					1600,
+    "modules-left":			[	//"custom/block0",
+								"hyprland/window"		],
 	"modules-center":		[	"hyprland/workspaces",	],
 	"modules-right":		[	"pulseaudio",			
 								"network",				
@@ -18,13 +18,19 @@
 	"start_hidden":				false,
 	"exclusive":				true,
 	"fixed-center":				true,
+	/*
+	"custom/block0":				{
+		"format":						"{}",
+		"min-length":					500
+	},
+	*/
 	"hyprland/window":				{
 		"format":						"{title}",
-		"max-length":					100,
-		"align":						1,
+		"max-length":					800,
+		"align":						0.5,
 		"show-focused-workspaces-name":	true,
 		"icon":							true,
-		"icon-size":					24
+		"icon-size":					20
 	},
 	"hyprland/workspaces":			{	
 		"all-outputs":					true,
@@ -47,12 +53,10 @@
 		"warp-on-scroll":				false,
     },
     "pulseaudio":					{
-        "format":						"{volume}% {icon} {format_source}",
-        "format-bluetooth":				"{volume}% {icon} {format_source}",
-        "format-bluetooth-muted":		"  {icon} {format_source}",
-        "format-muted":					"  {format_source}",
-        "format-source":				"{volume}% ",
-        "format-source-muted":			"",
+        "format":						"{volume}% {icon}",
+        "format-bluetooth":				"{volume}% {icon}",
+        "format-bluetooth-muted":		"  {icon}",
+        "format-muted":					"",
         "format-icons":				{
             "headphone":				"",
             "hands-free":				"",
@@ -68,12 +72,12 @@
     },
     "network":						{
 		"family":						"ipv4",
-        "format-wifi":					"{essid} ({signalStrength}%) ",
+        "format-wifi":					"{essid} ",
         "format-ethernet":				"{ipaddr}/{cidr} ",
-        "tooltip-format":				"{ifname} via {gwaddr} ",
-        "format-linked":				"{ifname} (No IP) ",
+        "tooltip-format":				"via {gwaddr} ",
+        "format-linked":				"(No IP) ",
         "format-disconnected":			"Disconnected ⚠",
-        "format-alt":					"{ifname}: {ipaddr}/{cidr}"
+        "format-alt":					"{ipaddr}/{cidr}"
     },
     "cpu":							{
         "format":						"{icon} {usage}%   {avg_frequency}GHz",
