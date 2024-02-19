@@ -1,0 +1,15 @@
+mode=drun
+width=25%
+prompt= 
+normal_window=false
+allow_images=true
+allow_markup=false
+term=kitty
+hide_scroll=true
+matching=fuzzy
+parse_search=true
+location=bottom
+lines=6
+columns=1
+set_order=alphabetical
+gtk_dark=true
