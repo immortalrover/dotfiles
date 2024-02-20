@@ -1,8 +1,9 @@
 *							{
-	border-top-left-radius:		20px;
-	border-top-right-radius:	20px;
+	margin:						0;
+	border:						0;
+	border-radius:				0;
+	padding:					0;
 }
-
 
 window						{
 	font-size:					30px;
@@ -14,25 +15,26 @@ window						{
 	color:						#ffffff;
 }
 
+#window						{
+	border-top-left-radius:		20px;
+	border-top-right-radius:	20px;
+}
+
 #outer-box					{
 	background-color:			transparent;
 }
 
 #input						{
-	border-bottom:				1px solid #ffffff;
+	border-bottom:				2px solid #bbbbbb;
 	border-radius:				20px;
 	font-size:					20px;
-	background-color:			transparent;
 }
 
 #scroll						{
+	border-bottom:				3px solid white;
 	padding:					0 40px;
 }
 
-#inner-box					{
-	border-radius:				0;
-}
-
-#entry						{
-	border-radius:				0;
+.entry#selected				{
+	background: linear-gradient(90deg, #3700a3, #9e008d, #d50071, #f42955, #ff6d40, #ffa239);
 }
