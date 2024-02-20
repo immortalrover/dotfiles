@@ -36,5 +36,5 @@ window						{
 }
 
 .entry#selected				{
-	background: linear-gradient(90deg, #3700a3, #9e008d, #d50071, #f42955, #ff6d40, #ffa239);
+	background: linear-gradient(60deg, #4ffff0, #ed1cff);
 }
