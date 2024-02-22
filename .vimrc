@@ -33,6 +33,7 @@ Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'tpope/vim-commentary'
+Plug 'amadeus/vim-convert-color-to'
 call plug#end()
 
 inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
