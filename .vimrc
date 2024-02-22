@@ -7,6 +7,7 @@
 
 " ==================== Editor behavior ====================
 filetype plugin on
+filetype plugin indent on
 set nocompatible
 set backspace=indent,eol,start
 set autoindent
@@ -31,6 +32,7 @@ Plug 'vim-autoformat/vim-autoformat'
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
@@ -56,6 +58,9 @@ let g:instant_markdown_port = 8888
 
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 autocmd FileType json syntax match Comment +\/\/.\+$+
+
+map <C-/> :Commentary<CR>
+
 
 " =================== Keyboard layout =====================
 " if you want to use Colemak layout, please delete the " at the beginning
