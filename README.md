@@ -35,6 +35,13 @@ cp -rf ./dotfiles/2k/.config/* ~/.config/
 cp -rf ./dotfiles/4k/.config/* ~/.config/
 ```
 
+### Configure fish
+```
+chsh -s /usr/bin/fish
+fish_config
+```
+Select your favorite styles.
+
 ### Configure vim
 ```
 sudo npm -g install instant-markdown-d
@@ -60,3 +67,5 @@ git clone https://github.com/Reledia/glow.yazi.git
 ```
 vim ~/.config/gBar/config
 ```
+See what you can change.
+
