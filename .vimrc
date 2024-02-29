@@ -33,11 +33,13 @@ set virtualedit=block
 call plug#begin('~/.vim/plugged')
 Plug 'amadeus/vim-convert-color-to'
 Plug 'ap/vim-css-color'
+Plug 'img-paste-devs/img-paste.vim'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
 Plug 'vim-autoformat/vim-autoformat'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 inoremap <silent><expr> <ENTER> coc#pum#visible() ? "<ESC>a" : "<ENTER>" 
@@ -66,11 +68,14 @@ let g:instant_markdown_open_to_the_world = 1
 let g:instant_markdown_port = 8888
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
-autocmd FileType vim,tex let b:autoformat_autoindent=0
+autocmd FileType markdown let g:PasteImageFunction = 'g:MarkdownPasteImage'
+autocmd FileType markdown,tex nmap <buffer><silent> P :call mdip#MarkdownClipboardImage()<CR>
+autocmd FileType tex let g:PasteImageFunction = 'g:LatexPasteImage'
 autocmd FileType typescriptreact,typescript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType vim,tex let b:autoformat_autoindent=0
+au FileType html let b:coc_root_patterns = ['tailwind.config.ts']
 
 map <C-/> :Commentary<CR>
-
 
 " =================== Keyboard layout =====================
 " if you want to use Colemak layout, please delete the " at the beginning
