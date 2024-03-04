@@ -40,6 +40,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'sheerun/vim-polyglot'
+Plug 'lervag/vimtex'
 call plug#end()
 
 inoremap <silent><expr> <ENTER> coc#pum#visible() ? "<ESC>a" : "<ENTER>" 
@@ -66,6 +67,9 @@ let g:instant_markdown_mathjax = 1
 let g:instant_markdown_mermaid = 1
 let g:instant_markdown_open_to_the_world = 1
 let g:instant_markdown_port = 8888
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_method = 'latexmk'
+
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
 autocmd FileType markdown let g:PasteImageFunction = 'g:MarkdownPasteImage'
