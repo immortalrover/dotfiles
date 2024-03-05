@@ -3,7 +3,7 @@
 
 ### Usage
 Run the bash scripts in this folder.
-- ['swwwInit.sh'](./swwwInit.sh) is used for start up swww. Please add "exec-once=<path-to-swwwInit.sh>" in your hyprland.conf.
+- ['swwwInit.sh'](./swwwInit.sh) is used for start swww. It always use the first image in your wallpaper folder. Please add "exec-once=<path-to-swwwInit.sh>" in your hyprland.conf.
 - ['swwwChange.sh'](./swwwChange.sh) is used for changing the current wallpaper to adjacent wallpapers. You can set a shoutcut key for it in your hyprland.conf.
 
 ### Configure
