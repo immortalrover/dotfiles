@@ -9,7 +9,7 @@ show-icons: true;
 terminal: "kitty";
 ssh-client: "ssh";
 /* ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]"; */
-run-command: "{terminal} --hold {cmd}";
+run-command: "{cmd}";
 /* run-list-command: ""; */
 run-shell-command: "{terminal} --hold {cmd}";
 /* window-command: "wmctrl -i -R {window}"; */
