@@ -205,9 +205,10 @@ rules = [
 	{ name = "*.conf", text = "", fg = "#6d8086" },
 	{ name = "*.ini" , text = "", fg = "#6d8086" },
 	{ name = "*.json", text = "", fg = "#cbcb41" },
-	{ name = "*.md" ,  text = "", fg = "#ffffff" },
+	{ name = "*.md"  , text = "", fg = "#ffffff" },
+	{ name = "*.mdx" , text = "", fg = "#ffffff" },
 	{ name = "*.toml", text = "", fg = "#ffffff" },
-	{ name = "*.txt",  text = "", fg = "#89e051" },
+	{ name = "*.txt" , text = "", fg = "#89e051" },
 	{ name = "*.yaml", text = "", fg = "#6d8086" },
 	{ name = "*.yml" , text = "", fg = "#6d8086" },
 
