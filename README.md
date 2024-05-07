@@ -28,18 +28,8 @@ git clone https://github.com/immortalrover/dotfiles.git
 cp -f ./dotfiles/.vimrc ~/.vimrc
 ```
 
-You should choose one of the following two options.
-
-##### for 2k monitor
-
 ```
-cp -rf ./dotfiles/2k/.config/* ~/.config/
-```
-
-##### for 4k monitor
-
-```
-cp -rf ./dotfiles/4k/.config/* ~/.config/
+cp -rf ./dotfiles/.config/* ~/.config/
 ```
 
 ### Configure fish
