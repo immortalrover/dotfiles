@@ -36,15 +36,15 @@ Plug 'ap/vim-css-color'
 Plug 'img-paste-devs/img-paste.vim'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'jiangmiao/auto-pairs'
-Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'vim-scripts/loremipsum'
+Plug 'lervag/vimtex'
 call plug#end()
 
-inoremap <silent><expr> <ENTER> coc#pum#visible() ? "<ESC>a" : "<ENTER>" 
+inoremap <silent><expr> <ENTER> coc#pum#visible() ? coc#_select_confirm() : "<ENTER>" 
 inoremap <silent><expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 nmap <silent> gd <Plug>(coc-definition)
@@ -77,8 +77,9 @@ autocmd FileType markdown let g:PasteImageFunction = 'g:MarkdownPasteImage'
 autocmd FileType markdown,tex nmap <buffer><silent> P :call mdip#MarkdownClipboardImage()<CR>
 autocmd FileType tex let g:PasteImageFunction = 'g:LatexPasteImage'
 autocmd FileType typescriptreact,typescript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType verilog setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType vim,tex let b:autoformat_autoindent=0
-au FileType html let b:coc_root_patterns = ['tailwind.config.ts']
+autocmd FileType html let b:coc_root_patterns = ['package.json']
 
 map <C-/> :Commentary<CR>
 
@@ -86,4 +87,5 @@ map <C-/> :Commentary<CR>
 " if you want to use Colemak layout, please delete the " at the beginning
 " source ~/.vim/colemak.vim
 source ~/.vim/qwerty.vim
+source ~/.vim/color.vim 
 
