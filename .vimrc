@@ -36,12 +36,13 @@ Plug 'ap/vim-css-color'
 Plug 'img-paste-devs/img-paste.vim'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'jiangmiao/auto-pairs'
+Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'vim-scripts/loremipsum'
-Plug 'lervag/vimtex'
 call plug#end()
 
 inoremap <silent><expr> <ENTER> coc#pum#visible() ? coc#_select_confirm() : "<ENTER>" 
