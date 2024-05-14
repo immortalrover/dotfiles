@@ -1,2 +1,6 @@
 # Update
 Update.sh
+
+# fish file
+*plugins
+*variables

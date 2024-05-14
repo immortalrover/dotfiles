@@ -9,5 +9,7 @@
 	"suggest.triggerAfterInsertEnter": true,
 	"cursors.nextKey": "<Tab>",
 	"cursors.previousKey": "<S-Tab>",
-	"hover.previewMaxHeight": 5
+	"hover.previewMaxHeight": 5,
+	"diagnostic.level": "warning",
+	"diagnostic.highlightLimit": 100
 }
