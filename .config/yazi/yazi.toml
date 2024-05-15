@@ -28,7 +28,7 @@ open = [
 	{ run = 'xdg-open "$@"',                desc = "Open"},
 ]
 browser = [
-	{run = 'chromium "$@"', block = true},
+	{run = 'firefox "$@"', block = true},
 ]
 reveal = [
 	{ run = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF"},
@@ -47,6 +47,7 @@ play = [
 [open]
 rules = [
 	{ name = "*.html", use = [ "browser", "open", "reveal" ] },
+	{ name = "*.webp", use = [ "browser", "open", "reveal" ] },
 	{ name = "*/", use = [ "edit", "open", "reveal" ] },
 
 	{ mime = "text/*",  use = [ "edit", "reveal" ] },
