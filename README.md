@@ -6,7 +6,7 @@ Self-use dot files for Hyprland.
 
 -   vim
 -   kitty
--   gBar
+-   ags
 -   fish
 -   rofi
 -   swww
@@ -16,7 +16,7 @@ Self-use dot files for Hyprland.
 
 ```
 sudo pacman -S vim vim-plug kitty fish fisher rofi swww yazi yay nodejs npm pulseaudio
-yay -S gBar-git
+yay -S aylurs-gtk-shell
 ```
 
 ## Installation
@@ -65,11 +65,3 @@ cd ~/.config/yazi/plugins/
 rmdir ./glow.yazi
 git clone https://github.com/Reledia/glow.yazi.git
 ```
-
-### Configure gBar
-
-```
-vim ~/.config/gBar/config
-```
-
-See what you can change.
