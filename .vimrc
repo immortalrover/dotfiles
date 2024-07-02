@@ -28,6 +28,7 @@ set softtabstop=4
 set tabstop=4
 set updatetime=300
 set virtualedit=block
+set tags=./tags
 
 " ===================   Plug Manager  =====================
 call plug#begin('~/.vim/plugged')
@@ -41,8 +42,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'vim-scripts/loremipsum'
+Plug 'preservim/tagbar'
+Plug 'tpope/vim-projectionist'
 call plug#end()
 
 inoremap <silent><expr> <ENTER> coc#pum#visible() ? coc#_select_confirm() : "<ENTER>" 
@@ -52,6 +57,12 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gy <Plug>(coc-type-definition)
+nmap <F8> :TagbarToggle<CR>
+" nnoremap <C-]> :tag<CR>
+" nnoremap <C-o> :pop<CR>
+nnoremap <silent> <C-n> :tnext<CR>
+nnoremap <silent> <C-p> :tprev<CR>
+
 
 "let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
 "let g:instant_markdown_python = 1
@@ -81,6 +92,7 @@ autocmd FileType typescriptreact,typescript setlocal tabstop=2 shiftwidth=2 soft
 autocmd FileType verilog setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 autocmd FileType html let b:coc_root_patterns = ['package.json']
+autocmd BufReadPost * if filereadable("tags") | set tags=./tags | endif
 
 map <C-/> :Commentary<CR>
 

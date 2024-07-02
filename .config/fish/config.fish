@@ -5,7 +5,7 @@ end
 set -x EDITOR vim
 set -x GPG_TTY $(tty)
 
-function ya
+function yy
     set tmp (mktemp -t "yazi-cwd.XXXXX")
     yazi $argv --cwd-file="$tmp"
     if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
@@ -17,6 +17,8 @@ end
 # pnpm
 set -gx PNPM_HOME "/home/rover/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
-# pnpm end
+# pnpm endif status is-interactive
+# Commands to run in interactive sessions can go here
+# end

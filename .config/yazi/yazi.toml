@@ -6,7 +6,7 @@ sort_reverse   = false
 sort_dir_first = true
 linemode       = "none"
 show_hidden    = false
-show_symlink   = true
+show_symlink   = false
 scrolloff      = 5
 
 [preview]
