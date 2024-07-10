@@ -4,6 +4,10 @@ end
 
 set -x EDITOR vim
 set -x GPG_TTY $(tty)
+set -x http_proxy http://127.0.0.1:20171
+set -x https_proxy http://127.0.0.1:20171
+set -x PATH /opt/riscv/bin $PATH
+
 
 function yy
     set tmp (mktemp -t "yazi-cwd.XXXXX")
